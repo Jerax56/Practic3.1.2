@@ -36,7 +36,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/updateUser")
-    public String updateEmployee(@RequestParam("ID") int ID, Model model) {
+    public String getUserById(@RequestParam("ID") int ID, Model model) {
         model.addAttribute("newUser", userService.getUser(ID));
         return "user-info";
     }
